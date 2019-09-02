@@ -1,5 +1,6 @@
 import random
 import json
+import socket
 from http_request import HttpRequest
 
 class ExternalFiles:
