@@ -1,4 +1,4 @@
-# Chatbot que usa o protovolo http apenas com socket
+# Chatbot que usa o protocolo http apenas com socket
 
 ## Exemplo de execução do servidor:
 python server.py localhost 5000
