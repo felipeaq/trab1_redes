@@ -16,14 +16,15 @@ class Server:
         sock=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.bind((self.ip,self.port))
         sock.listen(1)
-        while True:
+        while True: #fica escutando sempre, para estabelecer conexão com o cliente
             print ("aguardando conexao...")
             connection, client_address = sock.accept()
-            t = threading.Thread(target=self.thread_worker,args=(sock,connection,client_address))
-            self.thread_list.append(t)
+            t = threading.Thread(target=self.thread_worker,args=(sock,connection,client_address)) #manda para executar em uma thread
+            self.thread_list.append(t) #TODO tirar ou limitar threads
             t.start()
 
     def thread_worker(self,*args):
+        #metodo que funciona paralelo
         w=Worker(args[0],args[1],args[2],timeout=self.timeout)
         w.execute()
 
