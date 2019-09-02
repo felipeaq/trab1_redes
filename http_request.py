@@ -6,9 +6,6 @@ class HttpRequest(socket.socket):
 
     def make_request(self,link,server,port=80,message_lenght=256,max_len=2**20):
         data="erro na conexão com servidor: {}".format(server)
-        
-        
-        
         server_address = (server, port)
         try:
             self.connect(server_address)
