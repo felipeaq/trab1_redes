@@ -9,7 +9,6 @@ class Server:
         self.ip=ip
         self.n_threads=n_threads
         self.port = int(port)       
-        self.thread_list=[]
         self.timeout=timeout
     
     def start_listening(self):
@@ -20,7 +19,6 @@ class Server:
             print ("aguardando conexao...")
             connection, client_address = sock.accept()
             t = threading.Thread(target=self.thread_worker,args=(sock,connection,client_address)) #manda para executar em uma thread
-            self.thread_list.append(t) #TODO tirar ou limitar threads
             t.start()
 
     def thread_worker(self,*args):
