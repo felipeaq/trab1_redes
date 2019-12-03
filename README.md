@@ -22,12 +22,12 @@ python client.py localhost 5000
 ### exemplo do comando \veracao:
 \veracao GOOG
 
-#para executar com o mininet
+# para executar com o mininet
 
 ## sudo mn -c && sudo python topologia_certa.py (utilizando python2.7)
 
-##h1 xterm&
+### h1 xterm&
 
-##h2 xterm&
+### h2 xterm&
 
-###repita os exemplos anteriores do cliente-servidor (utilizando python3.7) em cada xterm para fazer funcionar
+### repita os exemplos anteriores do cliente-servidor (utilizando python3.7) em cada xterm para fazer funcionar
